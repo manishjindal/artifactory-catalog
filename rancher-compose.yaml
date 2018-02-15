@@ -1,0 +1,5 @@
+.catalog:
+  name: test-catalog
+  version: v1.6.14
+  description: Rancher Kubernetes service
+  minimum_rancher_version: v1.6.14
