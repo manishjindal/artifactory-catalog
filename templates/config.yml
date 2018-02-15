@@ -1,0 +1,9 @@
+name: Artifactory Demo
+description: |
+  Demo of deploying Hadoop using Rancher Compose + Docker Compose
+  version: 0.0.1-rancher1
+  category: Big Data
+  maintainer: Nathan Valentine <nathan@rancher.com>
+  license: Apache 2
+  projectURL: https://github.com/nrvale0/rancher-cattle-hadoopdemo:wq
+
