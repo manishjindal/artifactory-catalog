@@ -1,5 +1,5 @@
 .catalog:
-  name: Jenkins
+  name: GitLan
   version: 0
   description: |
-    Jenkins CI management server.
+    Gilab Repository Management
