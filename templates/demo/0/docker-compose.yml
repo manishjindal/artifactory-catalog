@@ -1,28 +1,14 @@
-postgres:
-  image: postgres:latest
-  container_name: postgres
+gitlab:
+  image: gitlab/gitlab-ce:latest
   environment:
-      POSTGRES_USER: "artifactory"
-      POSTGRES_PASSWORD: "artifactory"
-  ports:
-   - "5432:5432"
-  #volumes:
-  # - "/project/docker/postgres:/var/lib/postgresql/data"
-  restart: always
+    hostname: gitlab.example.com
 
-artifactory:
-  image: docker.bintray.io/jfrog/artifactory-pro:latest
-  environment:
-      DB_TYPE: "postgresql"
-      DB_HOST: "159.65.74.169"
-      DB_PORT: "5432"
-      DB_USER: "artifactory"
-      DB_PASSWORD: "artifactory"
-  #    EXTRA_JAVA_OPTIONS: "Xmx1g"
+  volumes:
+    - /srv/gitlab/config:/etc/gitlab
+    - /srv/gitlab/logs:/var/log/gitlab
+    - /srv/gitlab/data:/var/opt/gitlab
   ports:
-   - "8081:8081"
-  #volumes:
-  # - "/test/docker/artifactory:/var/opt/jfrog/artifactory"
-  #links:
-  # - postgres
+    - "80:80"
+    - "522:22"
+    - "443:443"
   restart: always
