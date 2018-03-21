@@ -1,5 +1,5 @@
-name: Artifactory Stack
+name: GitLab Stack
 description: |
-  Deploy Artifactory Stack Using Rancher Compose + Docker Compose
+  Deploy GitLab Stack Using Rancher Compose + Docker Compose
   version: 0.0.1-rancher1
   
